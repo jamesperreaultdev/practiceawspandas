@@ -1,0 +1,33 @@
+import pandas as pd
+
+#Import CSV
+chunksize = 500
+df = pd.read_csv("https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/index.csv", usecols = ['SKU','PricePerUnit'] error_bad_lines=False):
+#use index=false to get rid of the index, header = false,
+
+#Doing operations on the file
+
+#sort values in a given order
+df = pd.sort_values(,ascending=True)
+
+#concating  
+
+data = pd.DataFrame()
+df = pd.concat(data)
+#combine two columns
+
+df[1] = df[2] + df[3]
+
+#using method to apply something to the entire file
+
+def example_method(col1,col2):
+    if cond:
+        return('x')
+    else:
+        return('y')
+df['CustomRating'] = df.apply(lambda x: exmaple_method(x['Genre'],x['Rating']),axis=1)
+
+#saving to memory
+df.to_csv('index')
+
+
